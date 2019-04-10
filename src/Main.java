@@ -5,5 +5,6 @@ class Main{
 
         ClassX objX = new ClassX();
         ClassB objB = new ClassB();
+
     }
 }
