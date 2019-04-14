@@ -1,12 +1,15 @@
 public class ClassX {
 
-    ClassY objY = new ClassY(); //Создаем объект Y
-    ClassC objC = new ClassC(); //Создаем объект C
-
-    ClassZ objZ; // Ссылка на объект objZ
+    ClassY objY; //Создаем объект Y
+    ClassC objC; //Создаем объект C
+    ClassZ linkToZ; //Ссылка на объект Z
 
     ClassX(){
-        System.out.println(this);
 
+        objY = new ClassY(this); //Передаем объекту Y ссылку на объект X
+        objC = new ClassC(objY.objZ, objY); //Передаем объекту С ссылку на объект Z и ссылку на объект Y
+
+        linkToZ = objY.objZ; //Создаем ссылку на объект Z
+        System.out.println("I am linkToZ " + linkToZ);
     }
 }

@@ -1,9 +1,9 @@
 public class ClassY {
-    ClassZ objZ = new ClassZ(); //Создаем объект Z
-    ClassX objX;
+    ClassZ objZ; //Создаем объект Z
 
-    ClassY(){
-        System.out.println(this);
+    ClassY(ClassX objX){
+        objZ = new ClassZ(objX); //передаем объекту Z ссылку на объект Х
+
 
     }
 }

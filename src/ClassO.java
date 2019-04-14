@@ -1,5 +1,12 @@
 public class ClassO {
+
     ClassO(){
-        System.out.println(this);
+
     }
+
+    public void show(){
+        System.out.println("I am objO " + this);
+        System.out.println("SHOW.....");
+    }
+
 }
